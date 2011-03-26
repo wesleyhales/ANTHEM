@@ -1,0 +1,4 @@
+ANTHEM
+--------------
+Build from command line (run from parent dir of this repo):
+rm -rf anthem-1.0_copy/;cp -r anthem-1.0 anthem-1.0_copy;cd anthem-1.0_copy/chrome/anthem/;zip -r anthem.jar .;mv anthem.jar ../;cd ../; rm -rf anthem;cd ../;zip -r anthem_theme.jar .;mv anthem_theme.jar ../;cd ../

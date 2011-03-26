@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>{07b2a769-ed19-4483-87ce-c643914c9626}</em:id>
+    <em:version>1.6</em:version>
+    
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id>
+        <em:minVersion>3.0</em:minVersion>
+        <em:maxVersion>3.7.*</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+
+
+    <em:name>ANTHEM</em:name>
+    <em:description>A dark theme for Firefox with 100% original icons. Works on all platforms (Mac, Windows, and Linux)</em:description>
+    <em:creator>Wesley Hales</em:creator>
+    <em:contributor>Based on original Mac OS Firelight theme.</em:contributor>
+    <em:homepageURL>http://www.wesleyhales.com/page/anthem</em:homepageURL>
+    <em:aboutURL>http://www.wesleyhales.com/page/anthem</em:aboutURL>
+    <em:internalName>anthem</em:internalName>
+  </Description>      
+</RDF>

@@ -1,0 +1,5 @@
+skin	browser			anthem	jar:chrome/anthem.jar!/browser/
+skin	global			anthem	jar:chrome/anthem.jar!/global/
+skin	mozapps			anthem	jar:chrome/anthem.jar!/mozapps/
+skin	communicator	anthem jar:chrome/anthem.jar!/communicator/
+skin	help			anthem	jar:chrome/anthem.jar!/help/

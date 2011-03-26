@@ -1,0 +1,683 @@
+/*-------- Start Anthem Mods -------- */
+
+#main-window:not([active="true"]) > #navigator-toolbox > #nav-bar {
+  background-image: url("chrome://global/skin/toolbar/toolbar-background-inactive.gif");
+}
+
+#main-window:not([active="true"]) > #navigator-toolbox > #PersonalToolbar {
+  background-image: url("chrome://browser/skin/toolbar-background-inactive.gif");
+}
+
+/* ----- DEFAULT BACK BUTTON, STAND-ALONE ----- */
+
+#back-button {
+  -moz-image-region: rect(2px, 744px, 31px, 706px);
+  color:#fff;
+}
+#back-button[disabled="true"] {
+  -moz-image-region: rect(32px, 744px, 62px, 706px);
+}
+#back-button:hover:active:not([disabled]),
+#back-button[buttondown="true"]:not([disabled]),
+#back-button[open="true"] {
+  -moz-image-region: rect(62px, 744px, 92px, 706px);
+}
+
+/* ----- DEFAULT FORWARD BUTTON, STAND-ALONE ----- */
+
+#forward-button {
+  -moz-image-region: rect(2px, 777px, 31px, 744px);
+  color:#fff;
+}
+
+#forward-button[disabled="true"] {
+  -moz-image-region: rect(32px, 777px, 62px, 744px);
+}
+#forward-button:hover:active:not([disabled]),
+#forward-button[buttondown="true"]:not([disabled]),
+#forward-button[open="true"] {
+  -moz-image-region: rect(62px, 777px, 92px, 744px);
+}
+
+/* ----- DEFAULT BACK/FORWARD BUTTONS WES----- */
+
+toolbar[mode="icons"] #unified-back-forward-button > #back-button {
+  -moz-image-region: rect(2px, 658px, 40px, 621px);
+  -moz-margin-end: 0;
+  -moz-padding-end: 0;
+  border-left: none;
+  border-right: none;
+  color:#fff;
+}
+
+toolbar[mode="icons"] #unified-back-forward-button > #back-button[chromedir="rtl"] {
+  -moz-image-region: rect(0px, 582px, 33px, 547px);
+}
+
+toolbar[mode="icons"] #unified-back-forward-button > #back-button[disabled="true"] {
+ -moz-image-region: rect(40px, 658px, 78px, 621px);
+}
+
+toolbar[mode="icons"] #unified-back-forward-button > #back-button[disabled="true"][chromedir="rtl"] {
+  -moz-image-region: rect(33px, 582px, 68px, 547px);
+}
+
+toolbar[mode="icons"] #unified-back-forward-button > #back-button:hover:active:not([disabled]),
+toolbar[mode="icons"] #unified-back-forward-button > #back-button[open="true"] {
+  -moz-image-region: rect(78px, 658px, 116px, 621px);
+  color:#fff;
+}
+
+toolbar[mode="icons"] #unified-back-forward-button > #back-button:hover:active[chromedir="rtl"]:not([disabled]),
+toolbar[mode="icons"] #unified-back-forward-button > #back-button[open="true"][chromedir="rtl"] {
+  -moz-image-region: rect(66px, 582px, 99px, 547px);
+}
+
+toolbar[mode="icons"] #unified-back-forward-button > #forward-button {
+  -moz-image-region: rect(2px, 683px, 40px, 658px);
+  -moz-margin-start: 0;
+  -moz-margin-end: 0;
+  -moz-padding-start: 0;
+  -moz-padding-end: 0;
+  border-left: none;
+  border-right: none;
+}
+
+toolbar[mode="icons"] #unified-back-forward-button > #forward-button[chromedir="rtl"] {
+  -moz-image-region: rect(0px, 547px, 33px, 519px);
+}
+
+toolbar[mode="icons"] #unified-back-forward-button > #forward-button[disabled="true"] {
+ -moz-image-region: rect(40px, 683px, 78px, 658px);
+}
+
+toolbar[mode="icons"] #unified-back-forward-button > #forward-button[disabled="true"][chromedir="rtl"] {
+ -moz-image-region: rect(33px, 547px, 66px, 519px);
+}
+
+toolbar[mode="icons"] #unified-back-forward-button > #forward-button:hover:active:not([disabled]),
+toolbar[mode="icons"] #unified-back-forward-button > #forward-button[open="true"] {
+  -moz-image-region: rect(78px, 683px, 116px, 658px);
+  color:#fff;
+}
+
+toolbar[mode="icons"] #unified-back-forward-button > #forward-button[chromedir="rtl"]:hover:active:not([disabled]),
+toolbar[mode="icons"] #unified-back-forward-button > #forward-button[open="true"][chromedir="rtl"] {
+  -moz-image-region: rect(66px, 547px, 99px, 519px);
+}
+
+#back-forward-dropmarker {
+  -moz-image-region: rect(2px, 701px, 40px, 683px);
+  -moz-margin-start: 0;
+  -moz-margin-end: 3px;
+  -moz-padding-start: 0;
+  -moz-padding-end: 1px;
+  border-left: none;
+  border-right: none;
+}
+
+#back-forward-dropmarker[chromedir="rtl"] {
+  -moz-image-region: rect(0px, 519px, 33px, 504px);
+}
+
+toolbar[mode="icons"] #back-forward-dropmarker > image {
+  display: -moz-box;
+  margin: 0;
+  padding: 0;
+}
+
+toolbar[mode="icons"] #back-forward-dropmarker > dropmarker {
+  display: none;
+}
+
+#back-forward-dropmarker[disabled="true"] {
+ -moz-image-region: rect(40px, 701px, 78px, 683px);
+}
+
+#back-forward-dropmarker[disabled="true"][chromedir="rtl"] {
+ -moz-image-region: rect(33px, 519px, 66px, 504px);
+}
+
+#back-forward-dropmarker:hover:active:not([disabled]),
+#back-forward-dropmarker[open="true"] {
+  -moz-image-region: rect(78px, 701px, 116px, 683px);
+}
+
+#back-forward-dropmarker[chromedir="rtl"]:hover:active:not([disabled]),
+#back-forward-dropmarker[open="true"][chromedir="rtl"] {
+  -moz-image-region: rect(66px, 519px, 99px, 504px);
+}
+
+.unified-nav-back[_moz-menuactive],
+menupopup[chromedir="rtl"] > .unified-nav-forward[_moz-menuactive] {
+  list-style-image: url("chrome://browser/skin/menu-back.png") !important;
+}
+
+.unified-nav-forward[_moz-menuactive],
+menupopup[chromedir="rtl"] > .unified-nav-back[_moz-menuactive] {
+  list-style-image: url("chrome://browser/skin/menu-forward.png") !important;
+}
+
+
+/* ----- SMALL BACK BUTTON, PAIRED----- */
+
+toolbar[mode="icons"][iconsize="small"] #unified-back-forward-button > #back-button {
+  -moz-image-region: rect(2px, 744px, 31px, 706px);
+  -moz-margin-end: 0;
+  -moz-padding-end: 0;
+  border-left: none;
+  border-right: none;
+  color:#fff;
+}
+
+toolbar[mode="icons"][iconsize="small"] #unified-back-forward-button > #back-button[chromedir="rtl"] {
+  -moz-image-region: rect(0px, 664px, 23px, 630px);
+}
+
+toolbar[mode="icons"][iconsize="small"] #unified-back-forward-button > #back-button[disabled="true"] {
+  -moz-image-region: rect(32px, 744px, 62px, 706px);
+}
+
+toolbar[mode="icons"][iconsize="small"] #unified-back-forward-button > #back-button[disabled="true"][chromedir="rtl"] {
+  -moz-image-region: rect(23px, 664px, 46px, 630px);
+}
+
+toolbar[mode="icons"][iconsize="small"] #unified-back-forward-button > #back-button:hover:active:not([disabled]),
+toolbar[mode="icons"][iconsize="small"] #unified-back-forward-button > #back-button[open="true"] {
+  -moz-image-region: rect(62px, 744px, 92px, 706px);
+  color:#fff;
+}
+
+toolbar[mode="icons"][iconsize="small"] #unified-back-forward-button > #back-button[chromedir="rtl"]:hover:active:not([disabled]),
+toolbar[mode="icons"][iconsize="small"] #unified-back-forward-button > #back-button[open="true"][chromedir="rtl"] {
+  -moz-image-region: rect(46px, 664px, 69px, 630px);
+}
+
+/* ----- SMALL FORWARD BUTTON, PAIRED ----- */
+
+toolbar[mode="icons"][iconsize="small"] #unified-back-forward-button > #forward-button {
+  -moz-image-region: rect(2px, 777px, 31px, 744px);
+  -moz-margin-start: 0;
+  -moz-padding-start: 0;
+  border-left: none;
+  border-right: none;
+  color:#fff;
+}
+
+toolbar[mode="icons"][iconsize="small"] #unified-back-forward-button > #forward-button[chromedir="rtl"] {
+  -moz-image-region: rect(0px, 630px, 23px, 597px);
+}
+
+toolbar[mode="icons"][iconsize="small"] #unified-back-forward-button > #forward-button[disabled="true"] {
+ -moz-image-region: rect(32px, 777px, 62px, 744px);
+}
+
+toolbar[mode="icons"][iconsize="small"] #unified-back-forward-button > #forward-button[disabled="true"][chromedir="rtl"] {
+ -moz-image-region: rect(23px, 630px, 46px, 597px);
+}
+
+toolbar[mode="icons"][iconsize="small"] #unified-back-forward-button > #forward-button:hover:active:not([disabled]),
+toolbar[mode="icons"][iconsize="small"] #unified-back-forward-button > #forward-button[open="true"] {
+  -moz-image-region: rect(62px, 777px, 92px, 744px);
+  color:#fff;
+}
+
+toolbar[mode="icons"][iconsize="small"] #unified-back-forward-button > #forward-button[chromedir="rtl"]:hover:active:not([disabled]),
+toolbar[mode="icons"][iconsize="small"] #unified-back-forward-button > #forward-button[open="true"][chromedir="rtl"] {
+  -moz-image-region: rect(46px, 630px, 69px, 597px);
+}
+
+/* ----- SMALL BACK/FORWARD DROPMARKER ----- */
+
+toolbar[iconsize="small"] #unified-back-forward-button > #back-forward-dropmarker {
+  -moz-image-region: rect(2px, 796px, 31px, 777px);
+  color:#fff;
+}
+
+toolbar[iconsize="small"] #unified-back-forward-button > #back-forward-dropmarker[chromedir="rtl"] {
+  -moz-image-region: rect(0px, 596px, 23px, 582px);
+}
+
+toolbar[iconsize="small"] #unified-back-forward-button > #back-forward-dropmarker[disabled="true"] {
+ -moz-image-region: rect(32px, 796px, 62px, 777px);
+}
+
+toolbar[iconsize="small"] #unified-back-forward-button > #back-forward-dropmarker[disabled="true"][chromedir="rtl"] {
+ -moz-image-region: rect(23px, 596px, 46px, 582px);
+}
+
+toolbar[iconsize="small"] #unified-back-forward-button > #back-forward-dropmarker:hover:active:not([disabled]),
+toolbar[iconsize="small"] #unified-back-forward-button > #back-forward-dropmarker[open="true"] {
+  -moz-image-region: rect(62px, 796px, 91px, 777px);
+}
+
+toolbar[iconsize="small"] #unified-back-forward-button > #back-forward-dropmarker[chromedir="rtl"]:hover:active:not([disabled]),
+toolbar[iconsize="small"] #unified-back-forward-button > #back-forward-dropmarker[open="true"][chromedir="rtl"] {
+  -moz-image-region: rect(46px, 596px, 69px, 582px);
+}
+
+/* ----- DEFAULT RELOAD BUTTON ----- */
+
+#reload-button {
+  -moz-image-region: rect(2px, 132px, 29px, 93px);
+  color:#fff;
+}
+#reload-button[disabled="true"] {
+  -moz-image-region: rect(31px, 132px, 62px, 93px) !important;
+}
+#reload-button:hover:active {
+  -moz-image-region: rect(63px, 132px, 92px, 93px);
+   color:#336699;
+}
+
+/* ----- DEFAULT STOP BUTTON ----- */
+
+#stop-button {
+  -moz-image-region: rect(2px, 177px, 29px, 136px);
+   color:#fff;
+}
+#stop-button[disabled="true"] {
+  -moz-image-region: rect(31px, 177px, 62px, 136px) !important;
+  color:#acacac;
+}
+#stop-button:hover:active {
+  -moz-image-region: rect(63px, 177px, 92px, 136px);
+  color:#ececec;
+}
+
+
+/* ----- DEFAULT HOME BUTTON ----- */
+
+#home-button {
+  -moz-image-region: rect(2px, 220px, 29px, 180px);
+  color:#fff;
+}
+#home-button[disabled="true"] {
+  -moz-image-region: rect(31px, 220px, 62px, 180px) !important;
+}
+#home-button:hover:active {
+  -moz-image-region: rect(63px, 220px, 92px, 180px);
+
+}
+
+#home-button.bookmark-item {
+  list-style-image: url("chrome://browser/skin/home.png");
+  -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
+}
+
+#home-button.bookmark-item > .toolbarbutton-icon {
+  display: -moz-box !important;
+  padding: 0 !important;
+}
+/* ----- DEFAULT DOWNLOADS BUTTON ----- */
+
+#downloads-button {
+  -moz-image-region: rect(2px, 265px, 29px, 224px);
+  color:#fff;
+}
+#downloads-button[disabled="true"] {
+  -moz-image-region: rect(31px, 265px, 62px, 224px);
+}
+#downloads-button:hover:active {
+  -moz-image-region: rect(63px, 265px, 92px, 224px);
+}
+
+/* ----- DEFAULT HISTORY BUTTON ----- */
+
+#history-button {
+  -moz-image-region: rect(2px, 309px, 29px, 268px);
+  color:#fff;
+}
+#history-button[disabled="true"] {
+  -moz-image-region: rect(31px, 309px, 62px, 268px);
+}
+#history-button:hover:active {
+  -moz-image-region: rect(63px, 309px, 92px, 268px);
+  background-color: transparent;
+  border-color: transparent;
+}
+
+#history-button[checked="true"] {
+  -moz-image-region: rect(63px, 309px, 92px, 268px);
+  background-color: transparent;
+  border-color: transparent;
+}
+
+#history-button[checked="true"]:hover:active {
+  -moz-image-region: rect(63px, 309px, 92px, 268px);
+}
+
+/* ----- DEFAULT BOOKMARKS BUTTON ----- */
+
+#bookmarks-button {
+  -moz-image-region: rect(2px, 352px, 29px, 312px);
+  color:#fff;
+}
+#bookmarks-button[disabled="true"] {
+  -moz-image-region: rect(31px, 352px, 62px, 312px);
+}
+#bookmarks-button:hover:active {
+  -moz-image-region: rect(63px, 352px, 92px, 312px);
+  background-color: transparent;
+  border-color: transparent;
+}
+
+#bookmarks-button[checked="true"] {
+  -moz-image-region: rect(63px, 352px, 92px, 312px);
+  background-color: transparent;
+  border-color: transparent;
+}
+
+#bookmarks-button[checked="true"]:hover:active {
+  -moz-image-region: rect(63px, 352px, 92px, 312px);
+}
+
+/* ----- DEFAULT PRINT BUTTON ----- */
+
+#print-button {
+  -moz-image-region: rect(2px, 398px, 29px, 357px);
+  color:#fff;
+}
+#print-button[disabled="true"] {
+  -moz-image-region: rect(31px, 398px, 62px, 357px);
+}
+#print-button:hover:active {
+  -moz-image-region: rect(63px, 398px, 92px, 357px);
+}
+
+/* ----- DEFAULT NEW-TAB BUTTON ----- */
+
+#new-tab-button {
+  -moz-image-region: rect(2px, 442px, 29px, 401px);
+  color:#fff;
+}
+#new-tab-button[disabled="true"] {
+  -moz-image-region: rect(31px, 442px, 62px, 401px);
+}
+#new-tab-button:hover:active {
+  -moz-image-region: rect(63px, 442px, 92px, 401px);
+}
+
+/* ----- DEFAULT NEW-WINDOW BUTTON ----- */
+
+#new-window-button {
+  -moz-image-region: rect(2px, 486px, 29px, 446px);
+  color:#fff;
+}
+#new-window-button[disabled="true"] {
+  -moz-image-region: rect(31px, 486px, 62px, 446px);
+}
+#new-window-button:hover:active {
+  -moz-image-region: rect(63px, 486px, 92px, 446px);
+}
+
+/* ----- DEFAULT CUT BUTTON ----- */
+
+#cut-button {
+  -moz-image-region: rect(2px, 531px, 29px, 491px);
+  color:#fff;
+}
+#cut-button[disabled="true"] {
+  -moz-image-region: rect(31px, 531px, 62px, 491px) !important;
+}
+#cut-button:hover:active,
+#cut-button[checked="true"] {
+  -moz-image-region: rect(63px, 531px, 92px, 491px);
+}
+
+/* ----- DEFAULT COPY BUTTON ----- */
+
+#copy-button {
+  -moz-image-region: rect(2px, 574px, 29px, 535px);
+  color:#fff;
+}
+#copy-button[disabled="true"] {
+  -moz-image-region: rect(31px, 574px, 62px, 535px) !important;
+}
+#copy-button:hover:active,
+#copy-button[checked="true"] {
+  -moz-image-region: rect(63px, 574px, 92px, 535px);
+}
+/* ----- DEFAULT PASTE BUTTON ----- */
+
+#paste-button {
+  -moz-image-region: rect(2px, 619px, 29px, 578px);
+  color:#fff;
+}
+#paste-button[disabled="true"] {
+  -moz-image-region: rect(31px, 619px, 62px, 578px) !important;
+}
+#paste-button:hover:active,
+#paste-button[checked="true"] {
+  -moz-image-region: rect(63px, 619px, 92px, 578px);
+}
+
+/*wes-Bottom bar*/
+statusbarpanel#statusbar-display {
+  -moz-padding-start: 0;
+   background-position: bottom left;
+   color: #ffffff;
+}
+
+.statusbarpanel-text {
+  margin-top: 2px;
+  margin-bottom: 0;
+}
+
+#nav-bar {
+  padding: 7px 0px 5px 0;
+  margin: -4px 0 0 0;
+  background-color: #9e9e9e;
+  border-top: none;
+  border-bottom: 1px solid rgba(0,0,0,0.35);
+  background-image: url("chrome://global/skin/toolbar/toolbar-background.gif");
+  background-repeat: repeat-x;
+  background-position: top right;
+  overflow: hidden;
+}
+
+#nav-bar[iconsize="small"] {
+    background-image: url("chrome://global/skin/toolbar/toolbar-background.gif");
+	padding: 0;
+}
+
+/* ::::: tabbrowser ::::: */
+
+.tab-icon-image {
+  width: 16px;
+  height: 16px;
+  list-style-image: url("chrome://global/skin/tree/item.png");
+}
+
+.tab-icon {
+  margin: 0 0 4px 0;
+  opacity: 0.6;
+}
+
+.tabbrowser-tab:not([selected="true"]):hover .tab-icon,
+.tabbrowser-tab[selected="true"] .tab-icon {
+  opacity: 3.0;
+}
+
+.tab-text {
+  font: message-box;
+  margin-top: 0 !important;
+}
+
+.tab-text,
+.tab-text-shadow {
+  font-weight: bold !important;
+}
+
+.tabbrowser-tab[busy] > .tab-icon-image,
+.tabbrowser-tab[busy] > .tab-image-middle > .tab-icon > .tab-icon-image {
+ list-style-image: url("chrome://global/skin/icons/loading_16.png") !important;
+}
+
+.tabbrowser-tab {
+  -moz-binding: url("chrome://browser/skin/browser.xml#tabbrowser-tab") !important;
+  -moz-appearance: none;
+  color: #222;
+  -moz-box-pack: center;
+  padding: 0px;
+  border: none !important;
+  min-width: 1px !important;
+  text-align: center;
+  height: 29px;
+}
+
+.tabbrowser-tab[selected="true"] {
+  -moz-user-focus: normal;
+}
+
+.tabbrowser-tab[selected="true"]:focus > .tab-image-middle > .tab-text-stack > .tab-text {
+  outline: 2px solid #4F8EC9;
+  outline-offset: -2px;
+  -moz-outline-radius: 3px;
+}
+
+.tabbrowser-tab[selected="true"],
+.tabbrowser-tab:hover {
+  color: #000000;
+}
+
+.tab-image-left,
+.tab-image-right {
+  width: 8px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.tabbrowser-tab > .tab-image-right,
+.tabbrowser-tab[chromedir="rtl"] > .tab-image-left {
+  background: url("chrome://browser/skin/tabbrowser/tab-right.png") no-repeat;
+}
+
+.tabbrowser-tab:not([selected="true"]) > .tab-image-right,
+.tabbrowser-tab:not([selected="true"])[chromedir="rtl"] > .tab-image-left {
+  background: url("chrome://browser/skin/tabbrowser/tab-right-bkgnd.png") no-repeat;
+}
+
+.tabbrowser-tab > .tab-image-left,
+.tabbrowser-tab[chromedir="rtl"] > .tab-image-right {
+  background: url("chrome://browser/skin/tabbrowser/tab-left.png") no-repeat;
+}
+
+.tabbrowser-tab:not([selected="true"]) > .tab-image-left,
+.tabbrowser-tab:not([selected="true"])[chromedir="rtl"] > .tab-image-right {
+  background: url("chrome://browser/skin/tabbrowser/tab-left-bkgnd.png") no-repeat;
+}
+
+.tabbrowser-tab > .tab-image-middle,
+.tabbrowser-tab > .tab-closebutton {
+  background: url("chrome://browser/skin/tabbrowser/tab-middle.png") repeat-x;
+  -moz-box-pack: center;
+}
+
+.tabbrowser-tab:not([selected="true"]) > .tab-image-middle,
+.tabbrowser-tab:not([selected="true"]) > .tab-close-button {
+  background: url("chrome://browser/skin/tabbrowser/tab-middle-bkgnd.png");
+}
+
+.tabbrowser-tab:not([selected="true"]) > .tab-image-middle > .tab-icon > .tab-icon-image  {
+  list-style-image: url("chrome://global/skin/tree/item-grayscale.png");
+}
+
+.tabs-closebutton {
+  margin: 0;
+  list-style-image: url("chrome://global/skin/icons/closetab.png") !important;
+  background: none !important;
+}
+
+.tabs-closebutton:hover:active {
+  list-style-image: url("chrome://global/skin/icons/closetab-active.png") !important;
+  border: none !important;
+  background: none !important;
+}
+
+.tabbrowser-strip {
+  margin-top: -1px;
+  border-bottom: 1px solid #404040;
+  background-color: #9B9B9B;
+}
+
+.tabbrowser-tabs {
+  border: none;
+  -moz-box-pack: center;
+  -moz-box-align: center;
+  background: url("chrome://browser/skin/tabbrowser/tabbrowser-tabs-bkgnd.png") repeat-x;
+  height: 27px;
+}
+
+.tabs-left {
+  display: -moz-box;
+  width: 3px;
+}
+
+.tabbrowser-tabs[overflow="true"] .tabs-left {
+  display: none;
+}
+
+tabbrowser > tabbox > tabpanels {
+  -moz-appearance: none !important;
+}
+
+/**
+ * Tab Drag and Drop
+ */
+
+.tab-drop-indicator-bar {
+  height: 10px;
+  margin-top: -10px;
+  position: relative;
+  /* set -moz-margin-start to -1/2 indicator width: */
+  -moz-margin-start: -4px;
+}
+
+.tab-drop-indicator {
+  height: 33px;
+  width: 10px;
+  margin-bottom: -24px;
+  position: relative;
+  background: url('chrome://browser/skin/tabbrowser/tabDragIndicator.png') 50% 40% no-repeat;
+}
+
+/**
+ * In-tab close button
+ */
+
+.tab-close-button > .toolbarbutton-icon {
+  -moz-margin-end: 0px !important;
+  margin-top: 1px;
+}
+
+.tab-close-button {
+  list-style-image: url("chrome://global/skin/icons/closetab.png");
+  -moz-appearance: none;
+  border: none !important;
+  padding: 0 0 4px 0;
+  margin: 0;
+  background: inherit;
+  cursor: default;
+}
+
+.tab-close-button:hover,
+.tabbrowser-tab[selected="true"] > .tab-close-button:hover {
+  list-style-image: url("chrome://global/skin/icons/closetab-hover.png");
+}
+
+.tab-close-button:hover:active,
+.tabbrowser-tab[selected="true"] > .tab-close-button:hover:active {
+  list-style-image: url("chrome://global/skin/icons/closetab-active.png");
+}
+/*wes- this is where the glitch happens*/
+.tabbrowser-tab > .tab-close-button {
+  background-image: url("chrome://browser/skin/tabbrowser/tab-middle.png");
+  background-repeat: repeat-x;
+  background-position: 0 0;
+}
+
+
+/*-------- End Anthem Mods -------- */
+
+

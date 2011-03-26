@@ -1,0 +1,17 @@
+/* organize button */
+#organizeButton {
+  list-style-image: url("chrome://browser/skin/places/toolbar-button-organize.png");
+  color:#fff;
+}
+
+/* view button */
+#viewMenu {
+  list-style-image: url("chrome://browser/skin/places/toolbar-button-view.png");
+  color:#fff;
+}
+
+/* maintenance button */
+#maintenanceButton {
+  list-style-image: url("chrome://browser/skin/places/toolbar-button-backup.png");
+  color:#fff;
+}
